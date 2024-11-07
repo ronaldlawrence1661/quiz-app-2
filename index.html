@@ -1,70 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Digit Place Value</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .number {
-      font-size: 4em;
-      margin-bottom: 20px;
-    }
-
-    input[type="text"] {
-      width: 200px;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    button {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .feedback {
-      margin-top: 10px;
-      color: green;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h2>Where is the digit 5?</h2>
-    <div class="number">58</div>
-    <input type="text" id="onesPlace" placeholder="ones place">
-    <input type="text" id="tensPlace" placeholder="tens place">
-    <button onclick="checkAnswer()">Submit</button>
-    <div class="feedback" id="feedback"></div>
-  </div>
-
-  <script>
-    function checkAnswer() {
-      const onesPlaceInput = document.getElementById('onesPlace').value;
-      const tensPlaceInput = document.getElementById('tensPlace').value;
-      const feedback = document.getElementById('feedback');
-
-      if (onesPlaceInput === "5" && tensPlaceInput === "") {
+    <div id="root"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@4.7.7/dist/handlebars.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
