@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digit Place Value</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .number {
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+
+    input[type="text"] {
+      width: 200px;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .feedback {
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Where is the digit 5?</h2>
+    <div class="number">58</div>
+    <input type="text" id="onesPlace" placeholder="ones place">
+    <input type="text" id="tensPlace" placeholder="tens place">
+    <button onclick="checkAnswer()">Submit</button>
+    <div class="feedback" id="feedback"></div>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const onesPlaceInput = document.getElementById('onesPlace').value;
+      const tensPlaceInput = document.getElementById('tensPlace').value;
+      const feedback = document.getElementById('feedback');
+
+      if (onesPlaceInput === "5" && tensPlaceInput === "") {
